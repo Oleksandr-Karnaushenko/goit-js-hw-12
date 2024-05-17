@@ -100,10 +100,10 @@ const onLoadMore = async () => {
 
     setTimeout(() => {
       ref.loader.style = 'display:none';
-      scroll();
 
       // render data
       ref.gallery.insertAdjacentHTML('beforeend', renderPhotos(hits));
+      scroll();
 
       // check how many pages
       if (currentPage >= totalPages) {
