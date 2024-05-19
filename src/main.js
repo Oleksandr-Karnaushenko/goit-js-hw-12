@@ -38,6 +38,7 @@ const onFormSubmit = async event => {
       position: 'topRight',
       timeout: 2000,
     });
+    ref.loadMoreBtn.style = 'display:none';
     return;
   }
 
@@ -62,7 +63,6 @@ const onFormSubmit = async event => {
 
       // render data
       ref.gallery.innerHTML = renderPhotos(hits);
-      scroll();
 
       // check how many pages
       totalPages = Math.ceil(total / perPage);
